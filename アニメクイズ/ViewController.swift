@@ -18,6 +18,7 @@ class ViewController: UIViewController
         var answer:String
     }
     
+    //use for randomly choose questions
     var number = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
     var question_count = 0  //count for question now
     var score = 0
@@ -101,10 +102,10 @@ class ViewController: UIViewController
         image.image = UIImage(named: questions[value].image)
         questionNumber.text = "第\(question_count)題"
         Question.text = questions[value].question
-        
+        right_answer = questions[value].answer
+
         //remove the element so that doesn't choose it again
         number.remove(at: random_number)
-        right_answer = questions[value].answer
         
         //part 2. sort choices in random
         var choice_index = [0,1,2,3]
