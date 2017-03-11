@@ -43,24 +43,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saq-Ak-DtG">
-                                <rect key="frame" x="30" y="612" width="142.5" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saq-Ak-DtG">
+                                <rect key="frame" x="50" y="607" width="275" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A5q-nD-kKW"/>
+                                </constraints>
                                 <state key="normal" title="再玩一次">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cdu-8w-RQM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wr1-bk-nvC">
-                                <rect key="frame" x="202.5" y="612" width="142.5" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="下一題">
-                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RKl-wX-rkf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-2x-D49">
@@ -110,10 +102,12 @@
                             <constraint firstItem="wjS-hf-XL2" firstAttribute="height" secondItem="cZX-2x-D49" secondAttribute="height" id="2Oz-Na-mN0"/>
                             <constraint firstItem="zpS-9d-JJz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="3z4-Pb-wJ8"/>
                             <constraint firstItem="zpS-9d-JJz" firstAttribute="top" secondItem="e2w-ik-7Aj" secondAttribute="bottom" constant="30" id="4uK-sn-ACL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="saq-Ak-DtG" secondAttribute="bottom" constant="30" id="5Um-8h-Xck"/>
                             <constraint firstItem="wjS-hf-XL2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="8cW-Yy-HAQ"/>
                             <constraint firstAttribute="trailing" secondItem="wjS-hf-XL2" secondAttribute="trailing" constant="30" id="9hB-ky-WlK"/>
                             <constraint firstAttribute="trailing" secondItem="e2w-ik-7Aj" secondAttribute="trailing" constant="30" id="BGv-qZ-3Me"/>
                             <constraint firstItem="DHv-Yp-RPa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C7L-Vu-3Fx"/>
+                            <constraint firstAttribute="trailing" secondItem="saq-Ak-DtG" secondAttribute="trailing" constant="50" id="IRL-Cw-2XA"/>
                             <constraint firstItem="zpS-9d-JJz" firstAttribute="width" secondItem="cZX-2x-D49" secondAttribute="width" id="Mdf-wo-DAB"/>
                             <constraint firstItem="e2w-ik-7Aj" firstAttribute="top" secondItem="cZX-2x-D49" secondAttribute="bottom" constant="30" id="Owo-QD-TEJ"/>
                             <constraint firstItem="e2w-ik-7Aj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Ps6-yM-xSk"/>
@@ -121,6 +115,7 @@
                             <constraint firstItem="wjS-hf-XL2" firstAttribute="top" secondItem="zpS-9d-JJz" secondAttribute="bottom" constant="30" id="QYL-IE-sX9"/>
                             <constraint firstAttribute="trailing" secondItem="cZX-2x-D49" secondAttribute="trailing" constant="30" id="S06-vZ-kcA"/>
                             <constraint firstAttribute="trailing" secondItem="zpS-9d-JJz" secondAttribute="trailing" constant="30" id="UDg-Dj-7zT"/>
+                            <constraint firstItem="saq-Ak-DtG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="VEM-gd-hoe"/>
                             <constraint firstItem="cZX-2x-D49" firstAttribute="top" secondItem="FF7-ub-FGu" secondAttribute="bottom" constant="30" id="WFa-oJ-yZH"/>
                             <constraint firstItem="DHv-Yp-RPa" firstAttribute="top" secondItem="or2-4p-9PD" secondAttribute="bottom" constant="20" id="WgD-E1-327"/>
                             <constraint firstItem="wjS-hf-XL2" firstAttribute="width" secondItem="cZX-2x-D49" secondAttribute="width" id="ZOi-Se-Ak0"/>
@@ -135,6 +130,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Play_Again_Outlet" destination="saq-Ak-DtG" id="8kv-yv-V1a"/>
                         <outlet property="Question" destination="FF7-ub-FGu" id="OFD-jV-R3I"/>
                         <outlet property="image" destination="or2-4p-9PD" id="C5q-fz-pXf"/>
                         <outlet property="questionNumber" destination="DHv-Yp-RPa" id="L3M-KF-PaH"/>
